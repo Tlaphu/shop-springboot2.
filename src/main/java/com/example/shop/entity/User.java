@@ -21,7 +21,7 @@ public class User {
 
     private String username;
     private String password;
-    private Boolean active; // ✅ Boolean thay vì boolean
+    private Boolean active; 
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
@@ -39,7 +39,7 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public Boolean getActive() { return active; }   // ✅ giờ chắc chắn có getActive()
+    public Boolean getActive() { return active; }   
     public void setActive(Boolean active) { this.active = active; }
 
     public List<Order> getOrders() { return orders; }
