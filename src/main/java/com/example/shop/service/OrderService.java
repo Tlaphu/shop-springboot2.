@@ -49,7 +49,7 @@ public class OrderService {
             d.setQuantity(ci.getQuantity());
             d.setPrice(ci.getProduct().getPrice());
             details.add(detailRepo.save(d));
-            cartRepo.delete(ci); // remove from cart
+            cartRepo.delete(ci); 
         }
         order.setDetails(details);
 
