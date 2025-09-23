@@ -42,7 +42,7 @@ public class UserController {
     public User toggle(@PathVariable Long id) {
         User u = srv.findById(id).orElseThrow();
         Boolean current = u.getActive();
-        // nếu null thì mặc định là false
+
         u.setActive(current == null ? true : !current);
         return srv.save(u);
     }
