@@ -26,7 +26,7 @@ public class CartService {
     public ShoppingCart addToCart(Long userId, Long productId, int quantity){
         User u = userRepo.findById(userId).orElseThrow();
         Product p = productRepo.findById(productId).orElseThrow();
-        // try find existing cart item for same product & user
+        
         return cartRepo.findByUserId(userId).stream()
                 .filter(ci -> ci.getProduct().getId().equals(productId))
                 .findFirst()
