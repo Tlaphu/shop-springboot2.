@@ -18,7 +18,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    @JsonBackReference   // ngăn Jackson serialize ngược lại Category → tránh vòng lặp
+    @JsonBackReference   
     private Category category;
 
     // ==== Constructors ====
